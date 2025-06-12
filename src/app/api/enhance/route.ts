@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { enhanceImage } from '@/lib/gemini';
 import 'cross-fetch/polyfill';
 
-export const maxDuration = 300; // Set maximum duration to 300 seconds
+export const maxDuration = 60; // Set maximum duration to 300 seconds
 export const dynamic = 'force-dynamic'; // Disable static optimization
 
 if (!globalThis.fetch) {
