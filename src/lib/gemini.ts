@@ -46,13 +46,8 @@ export const enhanceImage = async (imageData: string) => {
     Return the enhanced image as a base64 string only, no text.`;
 
     const resultPromise = geminiModel.generateContent([
-      {
-        role: "user",
-        parts: [
-          { text: prompt },
-          imagePart
-        ]
-      }
+      { text: prompt },
+      imagePart
     ]);
 
     // Race between the actual request and timeout
